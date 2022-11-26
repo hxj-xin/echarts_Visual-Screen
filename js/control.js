@@ -182,19 +182,28 @@ function user(){
                   value: 1200,
                   itemStyle: {
                      color: '#153E61'
-                  }
+                  },
+                  tooltip: {
+                    extraCssText: "opacity:0;",
+                  },
                 },
                 {
                   value: 1200,
                   itemStyle: {
                      color: '#153E61'
-                  }
+                  },
+                  tooltip: {
+                    extraCssText: "opacity:0;",
+                  },
                 },
                 {
                   value: 1200,
                   itemStyle: {
                      color: '#153E61'
-                  }
+                  },
+                  tooltip: {
+                    extraCssText: "opacity:0;",
+                  },
                 },
                 900,
                 750,
