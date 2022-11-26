@@ -1,0 +1,418 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background: url(../img/bg.jpg) no-repeat;
+    background-size: cover;
+}
+h3,
+h4,
+ul{
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.viewport{
+    min-width: 1024px;
+    max-width: 1920px;
+    min-height: 10rem;
+    margin: 0 auto;
+    padding: .875rem .25rem  0;
+    background: url(../img/logo.png) no-repeat -5px 0;
+    background-size: contain;
+    display: flex;
+    .column {
+        flex: 3;
+    }
+    &>.column:nth-of-type(2){
+        flex: 4;
+        margin: .1875rem .1625rem 0;
+    }
+    .model{
+        border: .0125rem solid transparent;
+        border-image-source: url(../img/border.png);
+        border-image-slice: 51 38 20 132;
+        border-image-width: 51px 38px 20px 132px;
+        margin-bottom: .25rem;
+        .inner{
+            padding:16px 22px ;
+            h3{
+                font-size: 18px;
+                color: #FFFFFF;
+            }
+            h4{
+                font-size: 0.3rem;
+                color: white;
+            }
+            span{
+                font-size: .15rem;
+            }
+            .line{
+                display: inline-block;
+                width: 3px;
+                height: .125rem;
+                border-radius: .0625rem;
+                margin-right: .0375rem;
+            }
+            .item{
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 0.2rem;
+                h4{
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+// 概览
+.overview{
+    height: 1.25rem;
+    box-sizing: border-box;
+    ul{
+        height: .75rem;
+        display: flex;
+        justify-content: space-between;
+        li{
+            display: flex;
+            flex-direction: column;
+            span{
+                margin-top: .0625rem;
+                color: #009DFD;
+            }
+        }
+    }
+}
+// 设备监控
+.monitor{
+    // height: 4rem;
+    .switch{
+        height: 30px;
+        line-height: 30px;
+        display: flex;
+        a{
+            color: #009DFD;
+            font-size: .2125rem;
+        }
+        .active{
+            color: white;
+        }
+        .aline{
+            width: 3px;
+            height: 28px ;
+            margin: .0125rem .2rem 0;
+            background-color: #00DBFF;
+        }
+    }
+    .data{
+        // height: 3.75rem;
+        margin-top: 0.1rem;
+        p{
+            height: .375rem;
+            line-height: .375rem;
+            background-color: rgba(26,50,88, .7);
+            display: flex;
+            justify-content: space-between;
+            span{
+                margin-right: .25rem;
+                color: #00DBFF;
+            }
+            &>span:nth-of-type(2){
+                flex: 1;
+            }
+        }
+        .massagehd{
+            display: none;
+        }
+        .massage{
+            height: 3.25rem;
+            overflow: hidden;
+            ul{
+                li{
+                    height: .375rem;
+                    line-height:.375rem;
+                    display: flex;
+                    justify-content: space-between;
+                    span{
+                        margin-right: .25rem;
+                        color: #00DBFF;
+                    }
+                    &>span:nth-of-type(1){
+                        width: .875rem;
+                    }
+                    &>span:nth-of-type(2){
+                        flex: 1;
+                    }
+                }
+            }
+            .scroll{
+                animation: go 6s linear infinite;
+            }
+            @keyframes go {
+                0%{}
+                100%{
+                    transform: translateY(-30%);
+                }
+            }  
+        }
+    }
+}
+// 点位分布
+#point{
+    height: 3.25rem;
+    .chart{
+        display: flex;
+        justify-content: space-between;
+        .pie{
+            width: 2.5rem;
+            flex: 1;
+            height: 2.4rem;
+        }
+        .data{
+            width: 1.6rem;
+            // height: 2.1rem;
+            margin-top: 0.14rem;
+            margin-left: .125rem;
+            display: flex;
+            flex-direction: column;
+            background: url(../img/rect.png);
+            background-size: cover;
+            padding: 0.4rem 0 0 0.25rem;
+            box-sizing: border-box;
+            h4{
+                font-weight: 600;
+            }
+            span{
+                color: #FFA700;
+            }
+        }
+    }
+}
+// 渠道分布
+.map{
+    width: 6.5rem;
+    height: 5.83rem;
+    display: flex; 
+    flex-direction: column; 
+    h3{
+       font-size: .2rem;
+       text-indent: .35rem;
+       height: .675rem;
+       line-height: .675rem;
+       color: white;
+       background: url(../img/shebei.png) no-repeat 0 55%;
+       background-size: 0.25rem;
+    }
+    .chart{ 
+        flex: 1;
+        height: 5.14rem;
+        background-color: rgba(255, 255, 255, 0.05);
+        .geo{
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+        }
+    }
+}
+// 全国用户
+.user{
+    height: 3.2875rem;
+    margin-top: .2625rem;
+    .chart{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .bar{
+            flex: 1;
+        }
+        .data{
+            width: 1.6rem;
+            height: 2.1rem;
+            margin-top: 0.14rem;
+            display: flex;
+            flex-direction: column;
+            background: url(../img/rect.png);
+            background-size: cover;
+            padding: 0.4rem 0 0 0.25rem;
+            box-sizing: border-box;
+            h4{
+                font-weight: 600;
+            }
+            span{
+                color: #00E7DB;
+            }
+        }
+    }
+}
+// 订单
+.order{
+    height: 1.5rem;
+    .filter{
+        height: .2rem;
+        line-height: .2rem;
+        font-size: .175rem;
+        color: #0049B0;
+        display: flex;
+        margin-bottom: .125rem;
+        a{
+            padding: 0 .225rem;
+            border-right: 1px solid #00F6F5;
+            color: #0052C3;
+        }
+        &>a:nth-of-type(1){
+            padding-left: 0;
+        }
+        &>a:last-of-type{
+            border: none;
+        }
+        .active{
+            color: #fff;
+            font-weight: 500;
+        }
+    }
+    .data{
+        height: .75rem;
+        display: flex;
+        .item{
+            width: 50%;
+            h4{
+                font-size: .3rem;
+                font-weight: 500;
+                margin-bottom: 5px;
+            }
+            span{
+                color: #009DFD;
+            }
+        }
+
+    }
+    .datahidden{
+        display: none;
+    }
+}
+// 销售额
+.sale{
+    width: 4.8rem;
+    height: 2.5rem;
+    box-sizing: border-box;
+    .inner{
+        display: flex;
+        position: relative;
+        .tittle{
+            position: absolute;
+            display: flex;
+            h3{
+                height: 18px;
+                line-height: .225rem;
+                padding-right: .225rem;
+                margin-right: .125rem;
+                border-right: 1px solid #00F6F5;
+            }
+            a{
+                font-size: .175rem;
+                margin: 0 .15rem;
+                border-radius: 3px;
+                padding: 0 .025rem;
+                color: #00AFE7;
+            }
+            .active{
+                background-color: #009DFD;
+                color: white;
+            }
+        }
+        .chart{
+            height: 1.7rem;
+            flex: 1;
+            margin-top: .4rem;
+            // .label{
+            //     width: .625rem;
+            //     font-size: .175rem;
+            //     margin: .125rem 0 0 .375rem;
+            // }
+            .sline{
+             height: 100%;
+            }
+            
+        }
+    } 
+}
+// 
+.wap{
+    display: flex;
+    .channel{
+        width: 2.5rem;
+        margin-right: .125rem;
+        .chart{
+            height: 1.625rem;
+            .radar{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    .quarter{
+        flex: 1;
+        .inner{
+            padding: 16px 17px 0;
+            h4{
+                font-weight: 500;
+                font-size: .375rem;
+                text-align: center;
+                margin: 20px 0  18px;
+                small{
+                    font-size: 50%;
+                }
+            }
+            .data{
+                display: flex;
+                margin-bottom: 2px;
+                .item{
+                    width: 50%;
+                    height: .6875rem;
+                    h4{
+                        font-size: .275rem;
+                        margin: 0;
+                    }
+                    span{
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        margin-top: .0625rem;
+                        color: #00E7DB;
+                    }
+                }
+            }
+        }
+    }
+}
+// 完成进度
+.plan{
+    .chart{
+        height: 1.625rem;
+        margin-top: .05rem;
+        display: flex;
+        .water{
+            flex: 1;
+        }
+        .data{
+            width: 1.4375rem;
+            background: url(../img/rect.png);
+            background-size: cover;
+            padding: .25rem 0 0 0.25rem;
+            box-sizing: border-box;
+            h4{
+                font-weight: 600;
+            }
+            span{
+                color: #FFA700;
+            }
+        }
+    }
+}

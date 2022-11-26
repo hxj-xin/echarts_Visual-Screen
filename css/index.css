@@ -1,0 +1,392 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background: url(../img/bg.jpg) no-repeat;
+  background-size: cover;
+}
+h3,
+h4,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.viewport {
+  min-width: 1024px;
+  max-width: 1920px;
+  min-height: 10rem;
+  margin: 0 auto;
+  padding: 0.875rem 0.25rem 0;
+  background: url(../img/logo.png) no-repeat -5px 0;
+  background-size: contain;
+  display: flex;
+}
+.viewport .column {
+  flex: 3;
+}
+.viewport > .column:nth-of-type(2) {
+  flex: 4;
+  margin: 0.1875rem 0.1625rem 0;
+}
+.viewport .model {
+  border: 0.0125rem solid transparent;
+  border-image-source: url(../img/border.png);
+  border-image-slice: 51 38 20 132;
+  border-image-width: 51px 38px 20px 132px;
+  margin-bottom: 0.25rem;
+}
+.viewport .model .inner {
+  padding: 16px 22px ;
+}
+.viewport .model .inner h3 {
+  font-size: 18px;
+  color: #FFFFFF;
+}
+.viewport .model .inner h4 {
+  font-size: 0.3rem;
+  color: white;
+}
+.viewport .model .inner span {
+  font-size: 0.15rem;
+}
+.viewport .model .inner .line {
+  display: inline-block;
+  width: 3px;
+  height: 0.125rem;
+  border-radius: 0.0625rem;
+  margin-right: 0.0375rem;
+}
+.viewport .model .inner .item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.2rem;
+}
+.viewport .model .inner .item h4 {
+  font-size: 18px;
+}
+.overview {
+  height: 1.25rem;
+  box-sizing: border-box;
+}
+.overview ul {
+  height: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+}
+.overview ul li {
+  display: flex;
+  flex-direction: column;
+}
+.overview ul li span {
+  margin-top: 0.0625rem;
+  color: #009DFD;
+}
+.monitor .switch {
+  height: 30px;
+  line-height: 30px;
+  display: flex;
+}
+.monitor .switch a {
+  color: #009DFD;
+  font-size: 0.2125rem;
+}
+.monitor .switch .active {
+  color: white;
+}
+.monitor .switch .aline {
+  width: 3px;
+  height: 28px ;
+  margin: 0.0125rem 0.2rem 0;
+  background-color: #00DBFF;
+}
+.monitor .data {
+  margin-top: 0.1rem;
+}
+.monitor .data p {
+  height: 0.375rem;
+  line-height: 0.375rem;
+  background-color: rgba(26, 50, 88, 0.7);
+  display: flex;
+  justify-content: space-between;
+}
+.monitor .data p span {
+  margin-right: 0.25rem;
+  color: #00DBFF;
+}
+.monitor .data p > span:nth-of-type(2) {
+  flex: 1;
+}
+.monitor .data .massagehd {
+  display: none;
+}
+.monitor .data .massage {
+  height: 3.25rem;
+  overflow: hidden;
+}
+.monitor .data .massage ul li {
+  height: 0.375rem;
+  line-height: 0.375rem;
+  display: flex;
+  justify-content: space-between;
+}
+.monitor .data .massage ul li span {
+  margin-right: 0.25rem;
+  color: #00DBFF;
+}
+.monitor .data .massage ul li > span:nth-of-type(1) {
+  width: 0.875rem;
+}
+.monitor .data .massage ul li > span:nth-of-type(2) {
+  flex: 1;
+}
+.monitor .data .massage .scroll {
+  animation: go 6s linear infinite;
+}
+@keyframes go {
+  100% {
+    transform: translateY(-30%);
+  }
+}
+#point {
+  height: 3.25rem;
+}
+#point .chart {
+  display: flex;
+  justify-content: space-between;
+}
+#point .chart .pie {
+  width: 2.5rem;
+  flex: 1;
+  height: 2.4rem;
+}
+#point .chart .data {
+  width: 1.6rem;
+  margin-top: 0.14rem;
+  margin-left: 0.125rem;
+  display: flex;
+  flex-direction: column;
+  background: url(../img/rect.png);
+  background-size: cover;
+  padding: 0.4rem 0 0 0.25rem;
+  box-sizing: border-box;
+}
+#point .chart .data h4 {
+  font-weight: 600;
+}
+#point .chart .data span {
+  color: #FFA700;
+}
+.map {
+  width: 6.5rem;
+  height: 5.83rem;
+  display: flex;
+  flex-direction: column;
+}
+.map h3 {
+  font-size: 0.2rem;
+  text-indent: 0.35rem;
+  height: 0.675rem;
+  line-height: 0.675rem;
+  color: white;
+  background: url(../img/shebei.png) no-repeat 0 55%;
+  background-size: 0.25rem;
+}
+.map .chart {
+  flex: 1;
+  height: 5.14rem;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+.map .chart .geo {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+.user {
+  height: 3.2875rem;
+  margin-top: 0.2625rem;
+}
+.user .chart {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.user .chart .bar {
+  flex: 1;
+}
+.user .chart .data {
+  width: 1.6rem;
+  height: 2.1rem;
+  margin-top: 0.14rem;
+  display: flex;
+  flex-direction: column;
+  background: url(../img/rect.png);
+  background-size: cover;
+  padding: 0.4rem 0 0 0.25rem;
+  box-sizing: border-box;
+}
+.user .chart .data h4 {
+  font-weight: 600;
+}
+.user .chart .data span {
+  color: #00E7DB;
+}
+.order {
+  height: 1.5rem;
+}
+.order .filter {
+  height: 0.2rem;
+  line-height: 0.2rem;
+  font-size: 0.175rem;
+  color: #0049B0;
+  display: flex;
+  margin-bottom: 0.125rem;
+}
+.order .filter a {
+  padding: 0 0.225rem;
+  border-right: 1px solid #00F6F5;
+  color: #0052C3;
+}
+.order .filter > a:nth-of-type(1) {
+  padding-left: 0;
+}
+.order .filter > a:last-of-type {
+  border: none;
+}
+.order .filter .active {
+  color: #fff;
+  font-weight: 500;
+}
+.order .data {
+  height: 0.75rem;
+  display: flex;
+}
+.order .data .item {
+  width: 50%;
+}
+.order .data .item h4 {
+  font-size: 0.3rem;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.order .data .item span {
+  color: #009DFD;
+}
+.order .datahidden {
+  display: none;
+}
+.sale {
+  width: 4.8rem;
+  height: 2.5rem;
+  box-sizing: border-box;
+}
+.sale .inner {
+  display: flex;
+  position: relative;
+}
+.sale .inner .tittle {
+  position: absolute;
+  display: flex;
+}
+.sale .inner .tittle h3 {
+  height: 18px;
+  line-height: 0.225rem;
+  padding-right: 0.225rem;
+  margin-right: 0.125rem;
+  border-right: 1px solid #00F6F5;
+}
+.sale .inner .tittle a {
+  font-size: 0.175rem;
+  margin: 0 0.15rem;
+  border-radius: 3px;
+  padding: 0 0.025rem;
+  color: #00AFE7;
+}
+.sale .inner .tittle .active {
+  background-color: #009DFD;
+  color: white;
+}
+.sale .inner .chart {
+  height: 1.7rem;
+  flex: 1;
+  margin-top: 0.4rem;
+}
+.sale .inner .chart .sline {
+  height: 100%;
+}
+.wap {
+  display: flex;
+}
+.wap .channel {
+  width: 2.5rem;
+  margin-right: 0.125rem;
+}
+.wap .channel .chart {
+  height: 1.625rem;
+}
+.wap .channel .chart .radar {
+  width: 100%;
+  height: 100%;
+}
+.wap .quarter {
+  flex: 1;
+}
+.wap .quarter .inner {
+  padding: 16px 17px 0;
+}
+.wap .quarter .inner h4 {
+  font-weight: 500;
+  font-size: 0.375rem;
+  text-align: center;
+  margin: 20px 0  18px;
+}
+.wap .quarter .inner h4 small {
+  font-size: 50%;
+}
+.wap .quarter .inner .data {
+  display: flex;
+  margin-bottom: 2px;
+}
+.wap .quarter .inner .data .item {
+  width: 50%;
+  height: 0.6875rem;
+}
+.wap .quarter .inner .data .item h4 {
+  font-size: 0.275rem;
+  margin: 0;
+}
+.wap .quarter .inner .data .item span {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-top: 0.0625rem;
+  color: #00E7DB;
+}
+.plan .chart {
+  height: 1.625rem;
+  margin-top: 0.05rem;
+  display: flex;
+}
+.plan .chart .water {
+  flex: 1;
+}
+.plan .chart .data {
+  width: 1.4375rem;
+  background: url(../img/rect.png);
+  background-size: cover;
+  padding: 0.25rem 0 0 0.25rem;
+  box-sizing: border-box;
+}
+.plan .chart .data h4 {
+  font-weight: 600;
+}
+.plan .chart .data span {
+  color: #FFA700;
+}
